@@ -1,0 +1,40 @@
+<div class="us-so-far-wrapper">
+  <h1>Us So Far</h1>
+  <button class="btn btn-custom btn-open-popup" (click)="togglePopup()">+ Add Post</button>
+
+  <!-- Space below the Add Post button -->
+  <div class="mb-4"></div>
+
+  <!-- Bootstrap Card Columns for Masonry Layout -->
+  <div class="card-columns">
+    <div class="card" *ngFor="let post of posts">
+      <div class="card-image-container">
+        <img [src]="post.image" class="card-img-top post-image" alt="Post Image" />
+        <div class="card-img-overlay post-caption d-flex align-items-center justify-content-center">
+          <p>{{ post.caption }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Post Popup -->
+  <div class="popup" *ngIf="isPopupOpen">
+    <div class="popup-content">
+      <span class="close-popup" (click)="togglePopup()">×</span>
+      <h2>Add a Post</h2>
+      <input
+        type="text"
+        [(ngModel)]="newPostCaption"
+        placeholder="Enter caption"
+        class="form-control mb-3"
+      />
+      <input
+        type="file"
+        (change)="onFileSelected($event)"
+        accept="image/*"
+        class="form-control mb-3"
+      />
+      <button (click)="addPost()" class="btn btn-success">Add Post</button>
+    </div>
+  </div>
+</div>

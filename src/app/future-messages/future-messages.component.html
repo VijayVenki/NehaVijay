@@ -1,0 +1,50 @@
+<div class="future-messages-wrapper">
+    <h1>Future Messages</h1>
+    <div class="message-list">
+        <div
+          class="message-card"
+          [ngClass]="{ locked: !isMessageOpenable(message.date) }"
+          *ngFor="let message of futureMessages"
+        >
+          <div class="overlay glow" *ngIf="!isMessageOpenable(message.date)"></div>
+          <h2>{{ message.title }}</h2>
+          <p>{{ message.date | date: 'fullDate' }}</p>
+          <div class="content">
+            <ng-container *ngIf="isMessageOpenable(message.date); else lockedMessage">
+              <p>{{ message.description }}</p>
+            </ng-container>
+            <ng-template #lockedMessage>
+              <p class="locked">
+                This message is locked until {{ message.date | date: 'fullDate' }}.
+              </p>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    <div class="new-message">
+      <h2>Create a New Message</h2>
+      <form (submit)="addMessage()">
+        <input
+          type="text"
+          placeholder="Message Title"
+          [(ngModel)]="newMessage.title"
+          name="title"
+          required
+        />
+        <textarea
+          placeholder="Message Description"
+          [(ngModel)]="newMessage.description"
+          name="description"
+          required
+        ></textarea>
+        <input
+          type="date"
+          [(ngModel)]="newMessage.date"
+          name="date"
+          required
+        />
+        <button type="submit">Save Message</button>
+      </form>
+    </div>
+  </div>
+  

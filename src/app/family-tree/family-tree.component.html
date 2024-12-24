@@ -1,0 +1,31 @@
+<!-- Tile Selection View -->
+<div *ngIf="!selectedSide" class="family-tree-selection-wrapper">
+    <h1>Choose a Family Tree</h1>
+    <div class="family-tree-selection">
+      <div class="tile" (click)="selectSide('herSide')">
+        <i class="fas fa-female icon"></i>
+        <h2>Her Side</h2>
+        <p>Explore her family tree</p>
+      </div>
+      <div class="tile" (click)="selectSide('mySide')">
+        <i class="fas fa-male icon"></i>
+        <h2>My Side</h2>
+        <p>Explore my family tree</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Her Side Family Tree -->
+  <div *ngIf="selectedSide === 'herSide'" class="family-tree-container">
+    <button class="back-button" (click)="selectSide(null)">Back</button>
+    <h2>Her Side of the Family</h2>
+    <app-family-tree-display [treeData]="familyData.herSide"></app-family-tree-display>
+  </div>
+  
+  <!-- My Side Family Tree -->
+  <div *ngIf="selectedSide === 'mySide'" class="family-tree-container">
+    <button class="back-button" (click)="selectSide(null)">Back</button>
+    <h2>My Side of the Family</h2>
+    <app-family-tree-display [treeData]="familyData.mySide"></app-family-tree-display>
+  </div>
+  

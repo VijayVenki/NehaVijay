@@ -1,0 +1,95 @@
+<div class="family-tree-wrapper">
+    <div class="family-tree">
+        <!-- Loop through all grandparents -->
+        <ul *ngFor="let grandparent of treeData.grandparents">
+            <li>
+                <!-- Grandparent Node -->
+                <div class="node">
+                    <div class="clickable-box" (click)="navigateToProfile(grandparent.id)">
+                        <img *ngIf="grandparent.image; else noImage" [src]="grandparent.image"
+                            alt="{{ grandparent.name }}">
+                        <ng-template #noImage>
+                            <div class="empty-cell">No Image</div>
+                        </ng-template>
+                        <p>{{ grandparent.name }}</p>
+                    </div>
+                </div>
+
+                <!-- Parents Row -->
+                <ul>
+                    <li *ngFor="let parent of grandparent.children">
+                        <div class="node">
+                            <div class="clickable-box" (click)="navigateToProfile(parent.id)">
+                                <img *ngIf="parent.image; else noImage" [src]="parent.image" alt="{{ parent.name }}">
+                                <ng-template #noImage>
+                                    <div class="empty-cell">No Image</div>
+                                </ng-template>
+                                <p>{{ parent.name }}</p>
+                            </div>
+                        </div>
+
+                        <!-- Children Row -->
+                        <ul>
+                            <li *ngFor="let child of parent.children">
+                                <div class="node">
+                                    <div class="clickable-box" (click)="navigateToProfile(child.id)">
+                                        <img *ngIf="child.image; else noImage" [src]="child.image"
+                                            alt="{{ child.name }}">
+                                        <ng-template #noImage>
+                                            <div class="empty-cell">No Image</div>
+                                        </ng-template>
+                                        <p>{{ child.name }}</p>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li *ngFor="let grandchild of child.children">
+                                        <div class="node">
+                                            <div class="clickable-box" (click)="navigateToProfile(grandchild.id)">
+                                                <img *ngIf="grandchild.image; else noImage" [src]="grandchild.image"
+                                                    alt="{{ grandchild.name }}">
+                                                <ng-template #noImage>
+                                                    <div class="empty-cell">No Image</div>
+                                                </ng-template>
+                                                <p>{{ grandchild.name }}</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Cousins Section -->
+        <div class="cousins-section">
+            <h2>Cousins</h2>
+            <ul>
+                <li *ngFor="let cousin of treeData.cousins">
+                    <div class="node">
+                        <img *ngIf="cousin.image; else noImage" [src]="cousin.image" alt="{{ cousin.name }}">
+                        <ng-template #noImage>
+                            <div class="empty-cell">No Image</div>
+                        </ng-template>
+                        <p>{{ cousin.name }}</p>
+                    </div>
+
+                    <!-- Children of Cousins -->
+                    <ul>
+                        <li *ngFor="let cousinChild of cousin.children">
+                            <div class="node">
+                                <img *ngIf="cousinChild.image; else noImage" [src]="cousinChild.image"
+                                    alt="{{ cousinChild.name }}">
+                                <ng-template #noImage>
+                                    <div class="empty-cell">No Image</div>
+                                </ng-template>
+                                <p>{{ cousinChild.name }}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

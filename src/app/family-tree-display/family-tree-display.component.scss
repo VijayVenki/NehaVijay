@@ -1,0 +1,247 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Family Tree Wrapper */
+.family-tree-wrapper {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Stack family tree and cousins vertically */
+    align-items: center;    /* Center content horizontally */
+    justify-content: flex-start;  /* Align content to the top */
+}
+
+/* Family Tree Styling */
+.family-tree {
+    width: 100%;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack all family tree levels vertically */
+    align-items: center;    /* Center family tree nodes */
+}
+
+/* Connector Styles */
+.family-tree ul {
+    padding-top: 20px;
+    position: relative;
+    list-style-type: none;
+    transition: all 0.5s;
+}
+
+.family-tree li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+    transition: all 0.5s;
+}
+
+/* Connectors */
+.family-tree li::before,
+.family-tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 1px solid #ccc;
+    width: 50%;
+    height: 20px;
+}
+
+.family-tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 1px solid #ccc;
+}
+
+/* Remove connectors for single-child nodes */
+.family-tree li:only-child::after,
+.family-tree li:only-child::before {
+    display: none;
+}
+
+/* Remove space above single-child nodes */
+.family-tree li:only-child {
+    padding-top: 0;
+}
+
+/* Remove left connector from the first child and right connector from the last child */
+.family-tree li:first-child::before,
+.family-tree li:last-child::after {
+    border: 0 none;
+}
+.family-tree .node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    position: relative; /* Allows node positioning relative to its parent */
+    margin: 0 auto; /* Center the nodes */
+}
+
+/* Add vertical connector to the last nodes */
+.family-tree li:last-child::before {
+    border-right: 1px solid #ccc;
+    border-radius: 0 5px 0 0;
+}
+
+.family-tree li:first-child::after {
+    border-radius: 5px 0 0 0;
+}
+
+/* Add downward connectors from parents */
+.family-tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #ccc;
+    width: 0;
+    height: 20px;
+}
+
+/* Node Styling (for individuals in the family tree) */
+.family-tree .node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    position: relative; /* Allows node positioning relative to its parent */
+}
+
+/* Node Image and Empty Cell Styling */
+.family-tree .node img,
+.family-tree .node .empty-cell {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ff6b81;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #888;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect for Node */
+.family-tree .node img:hover,
+.family-tree .node .empty-cell:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Node Name Styling */
+.family-tree .node p {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #555;
+}
+
+.family-tree .node{ 
+    position: relative;
+}
+
+/* Cousins Section Styling */
+.cousins-section {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack cousin nodes vertically */
+    align-items: center;     /* Center the cousin section */
+    gap: 20px;               /* Space between cousin nodes */
+    margin-top: 40px;        /* Space between family tree and cousins */
+}
+
+/* Cousins List Styling */
+.cousins-section ul {
+    display: flex;
+    flex-wrap: wrap;         /* Wrap the cousin nodes into new lines if needed */
+    justify-content: center; /* Center the cousin nodes horizontally */
+    gap: 20px;               /* Space between cousin nodes */
+    list-style-type: none;
+    padding: 0;
+}
+
+.cousins-section li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;            /* Margin to ensure spacing around cousin nodes */
+}
+
+/* Cousins Node Styling */
+.cousins-section .node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cousins-section .node img,
+.cousins-section .node .empty-cell {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ff6b81;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #888;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cousins-section .node img:hover,
+.cousins-section .node .empty-cell:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cousins-section .node p {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .family-tree .node img,
+    .family-tree .node .empty-cell {
+        width: 60px;
+        height: 60px;
+    }
+
+    .family-tree .node p {
+        font-size: 12px;
+    }
+
+    .cousins-section .node img,
+    .cousins-section .node .empty-cell {
+        width: 60px;
+        height: 60px;
+    }
+
+    .cousins-section .node p {
+        font-size: 12px;
+    }
+}

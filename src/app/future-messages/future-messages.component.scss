@@ -1,0 +1,264 @@
+.future-messages-wrapper {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    color: #ff6b81;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .message-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .message-card {
+    background: #fff;
+    border-radius: 15px;
+    width: 260px;
+    padding: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .message-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .message-card h2 {
+    font-size: 1.5rem;
+    color: #ff6b81;
+    margin-bottom: 10px;
+  }
+  
+  .message-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .new-message {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .new-message h2 {
+    font-size: 1.8rem;
+    color: #ff6b81;
+    margin-bottom: 20px;
+  }
+  
+  .new-message form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .new-message input,
+  .new-message textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .new-message button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #ff6b81;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .new-message button:hover {
+    background: #e05568;
+  }
+  
+
+  .message-card {
+  background: #fff;
+  border-radius: 15px;
+  width: 260px;
+  padding: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.message-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.message-card h2 {
+  font-size: 1.5rem;
+  color: #ff6b81;
+  margin-bottom: 10px;
+}
+
+.message-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+.message-card.locked {
+  background: linear-gradient(135deg, #e8e8e8, #cfcfcf);
+  color: #999;
+  pointer-events: none; /* Prevent interaction */
+  filter: grayscale(80%);
+}
+
+.message-card.locked:hover {
+  transform: none; /* Remove hover effect for locked messages */
+  box-shadow: none;
+}
+
+.message-card.locked:before {
+  content: "\f023"; /* Font Awesome lock icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 3rem;
+  color: #666;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.message-card.locked .content {
+  filter: blur(4px); /* Blur the content */
+  transition: filter 0.3s;
+}
+
+.message-card.locked p.locked {
+  color: #444;
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.message-card.locked .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  z-index: 0;
+}
+.message-card {
+    background: #fff;
+    border-radius: 15px;
+    width: 260px;
+    padding: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .message-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .message-card h2 {
+    font-size: 1.5rem;
+    color: #ff6b81;
+    margin-bottom: 10px;
+  }
+  
+  .message-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .message-card.locked {
+    background: linear-gradient(135deg, #ffb3ba, #ffd5d8);
+    pointer-events: none; /* Prevent interaction */
+    filter: brightness(0.9);
+    position: relative;
+  }
+  
+  .message-card.locked:hover {
+    transform: none; /* Remove hover effect for locked messages */
+    box-shadow: none;
+  }
+  
+  .message-card.locked:before {
+    content: "\f023"; /* Font Awesome lock icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: rgba(255, 105, 135, 0.8); /* Soft pink lock icon */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-shadow: 0 0 10px rgba(255, 105, 135, 0.5);
+  }
+  
+  .message-card.locked .content {
+    filter: blur(5px); /* Blur the content */
+    opacity: 0.6;
+    transition: filter 0.3s, opacity 0.3s;
+  }
+  
+  .message-card.locked p.locked {
+    color: #ff6b81;
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .message-card.locked .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 105, 135, 0.2); /* Soft pink overlay */
+    border-radius: 15px;
+    z-index: 0;
+  }
+  
+  .message-card.locked .overlay.glow {
+    box-shadow: 0 0 15px rgba(255, 105, 135, 0.5), 0 0 30px rgba(255, 105, 135, 0.3);
+  }
+  

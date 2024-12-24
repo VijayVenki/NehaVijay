@@ -1,0 +1,206 @@
+{
+    "herSide": {
+      "grandparents": [
+        {
+          "id": "1",
+          "name": "Grandfather 1",
+          "relation": "Grandfather",
+          "age": 78,
+          "occupation": "Retired",
+          "bio": "A kind and wise man with a love for storytelling.",
+          "picture": "assets/images/grandfather1.jpg",
+          "children": [
+            {
+              "id": "2",
+              "name": "Parent 1",
+              "relation": "Father",
+              "age": 50,
+              "occupation": "Engineer",
+              "bio": "A hardworking father and a supportive husband.",
+              "picture": "assets/images/parent1.jpg",
+              "children": [
+                {
+                  "id": "3",
+                  "name": "Her Sister 1",
+                  "relation": "Cousin",
+                  "age": 25,
+                  "occupation": "Designer",
+                  "bio": "A creative spirit with a love for design.",
+                  "picture": "assets/images/cousin1.jpg"
+                }
+              ]
+            },
+            {
+              "id" : "3",
+              "name": "Her uncle ",
+              "children": [
+
+              ]
+            }
+          ]
+        }
+      ],
+      "cousins": [
+        {
+          "id": "4",
+          "name": "Her Uncle 1",
+          "relation": "Uncle",
+          "age": 55,
+          "occupation": "Doctor",
+          "bio": "A caring uncle who loves helping others.",
+          "picture": "assets/images/uncle1.jpg"
+        }
+      ]
+    },
+    "mySide": {
+      "grandparents": [
+        {
+          "id": "5",
+          "name": "Saraswathi Ammal",
+          "relation": "GrandMother",
+          "bio": "She was working in SBT as a stenographer and married to my grandfather who worked in LIC. Both lived in trivandrum Vinayaka Nagar. Fun Fact She bought a house in karamana, Trivandrum before the marriage. She has 6 sisters and only her younger sister is alive. Grandfater died 15 years ago.",
+          "opinion": "They raised me as a child. Have been there all the time and i was very close to my grandfather as a kid. He tought me vedas and all and made me a temple kid. He was a very happy and soulful person. ",
+          "image": "assets/images/VijayMomSide/saraswathiAmmal.jpg",
+          "spouse":{
+            "name" : "RV Subramoniam",
+            "image":"assets/images/VijayMomSide/rvsubramoniam.jpeg"
+
+          },
+          "children": [
+            {
+              "id": "6",
+              "name": "S Padma",
+              "relation": "Mother",
+              "bio": "She is awesome. She has been working in LIC for as long as i know. She is a Senior Divisional Manager in Udupi Branch drives a car now very good. She is living alone in udupi for a year and will get transfer next march. She is a very good cook and is very supporting and paavam.",
+              "opinion": "She is awesome and i think i am a bit harsh on her",
+              "image": "assets/images/VijayMomSide/amma.jpeg",
+              "children": [
+                {
+                  "id": "7",
+                  "name": "Me",
+                  "relation": "Me",
+                  "bio": "I work in EMBL-EBI. I am awesome and i am marrying the girl of my dreams soon. If you reach here send a message saying I have reached here and vijay is awesome so that i know",
+                  "image": "assets/images/VijayMomSide/me.jpg"
+                }
+              ]
+            },
+            {
+              "id":"110",
+              "name":"Balaji (Ramachandran)",
+              "relation": "Uncle",
+              "bio": "He is my maternal uncle. Balaji Maama works in a software Company as Manager in Chennai. Wife Shanti Maami she is a Professor in Shiv Nada University Chennai. They are the closest family to mom and are here for most of the stuff. Paati is staying with them almost permanently since we are in 2 different places",
+              "opinion":"They are close family. But they challenge me too. Both of them are really good at their own fields and i have been staying the most with them after my parents",
+              "image":"assets/images/VijayMomSide/balajimama.jpg",
+              "spouse":{
+                "name":"Shanti Natarajan",
+                "image":"assets/images/VijayMomSide/santimaami.jpg"
+              },
+              "children": [
+                {
+                  "id":"112",
+                  "name":"Nandhini",
+                  "relation":"Cousin Sister",
+                  "image":"assets/images/VijayMomSide/nandini.jpg",
+                  "bio":"She is an awesome sister. She is in 11th right now and studies soo good. She is a good basketball player plays piano and is a bit overwhelmed. I would say she is too worked up for 11th and we need to make sure she is happier after 12th. She is pretty cool and nerdy too. ",
+                  "opinion": "As said she needs to chill down and we need to make sure she has an excellent siblings"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id":"201",
+          "name":"Lalitha",
+          "relation":"GrandMother",
+          "image":"assets/images/VijayDadSide/lalitha.jpg",
+          "spouse":{
+            "name":"Venkiteshwara Iyer ",
+            "image":"assets/images/VijayDadSide/thatha.jpg"
+          },
+          "bio":"She has been a house wife most of her life. She did her degree in hindi but didnt go to work. Her family is from Perunthalmanna. Grandfather was a maths professor and immensly strict and famous. Kids from all across trivandrum would come for enterence coaching. He also started teaching in engineering colleges. Fun Fact : I am named after him and i have a lot of qualities similar to him",
+          "opinion":"They havent taken care of me as much as my moms parents did but they are really good too. I am exactly similar to my grandfather in a looot of stuff and its evident too. Maybe not as good as a mathamatician tho",
+          "children": [
+            {
+              "id": "203",
+              "name":"Hareesh ",
+              "relation":"Periyappa",
+              "image": "assets/images/VijayDadSide/hareesh.jpg",
+              "bio": "He is a periyappa of mine. He is kinda wierd and was in Qutar for a looong time of our lives. His wife always fights with our family whenever she gets a chance and is probably the reason of my mom and dads fights the most. Meera periyamma is a house wife idk what she does or did before me There are multiple incidents with them which i would say later", 
+              "opinion": "They are soo off family kinda that i am not sure even if they all will come to the wedding. I hope they do not :)",
+              "spouse": {
+                "name":"Meera",
+                "image":"assets/images/VijayDadSide/meera.jpg"
+              },
+              "children":[
+                {
+                  "id":"204",
+                  "name": "Shreya",
+                  "relation":"Sister",
+                  "image":"assets/images/VijayDadSide/shreya.jpeg",
+                  "bio":"She is a cousin who probably i havent talked to in years or never. She lives in US and is an architect who is married there too. Not mcuh info i know about her, but here is some info i want to say to my beautiful fiancee (soon to be wife). I love you and let me know in msg if you have found this with msg \" Found you in the shambles \""
+                },
+                {
+                  "id":"205",
+                  "name":"Shreeja",
+                  "relation":"Sister",
+                  "bio":"Did some opthanmology or something and is married off in US but is back in india for some reason idk"
+                }
+              ]
+            },
+            {
+              "id":"205",
+              "name":"Ramesh",
+              "relation":"Periyappa",
+              "image":"assets/images/VijayDadSide/ramesh.jpg",
+              "spouse":{
+                "name":"Padma",
+                "image":"assets/images/VijayDadSide/padma.jpg"
+              },
+              "bio": "He is also similar to hareesh or even worse. Dosent come or i havent seen him in years. He is a college professor teaching idk what and his wife is a doctor somewhere. They are living somewhere near palakkad also i dont know much about them ",
+              "opinion":"You probably wont see him ever in your life ", 
+              "children":[
+                {
+                  "id":"206",
+                  "name":"Archana",
+                  "relation":"Sister",
+                  "image":"assets/images/VijayDadSide/archana.jpg",
+                  "bio":"She is probably the only sister in my dads main side i was close with. We used to go stay in my granddads house together and all. She got me into the habit of reading and was awesome. Got out ouf touch for years. She is a dentist and is married to that guy who is annoying in chennai ",
+                  "opinion":"Lost touch of her for a long time",
+                  "children":[
+                    {
+                      "id":"207",
+                      "name":"Rishikesh",
+                      "bio": "Dude is 3 years old and thats all i know. Met him once or twice idk"
+                    }
+                  ]
+                },
+                {
+                  "id":"207",
+                  "name":"Abhishek",
+                  "relation":"Brother",
+                  "image":"assets/images/VijayDadSide/abhishek.jpg",
+                  "bio":"He is the brother who i am not close too. Did his engineering or something, i havent seen him much as well so idk",
+                  "opinion": "N/A"
+                }
+              ]
+            },
+            {
+              "id":"202",
+              "name":"V Subramoniam",
+              "relation": "Dad",
+              "children":[
+                {
+                  "id": "7",
+                  "name": "Me",
+                  "relation": "Me",
+                  "bio": "I work in EMBL-EBI. I am awesome and i am marrying the girl of my dreams soon. If you reach here send a message saying I have reached here and vijay is awesome so that i know",
+                  "image": "assets/images/VijayMomSide/me.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+  

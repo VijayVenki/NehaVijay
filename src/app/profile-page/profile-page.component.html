@@ -1,0 +1,35 @@
+<div class="profile-wrapper">
+    <button class="back-button" (click)="clickBackButton()">Back</button>
+    <div class="profile-container">
+      <!-- Left Side: Images -->
+      <div class="profile-images">
+        <img 
+          *ngIf="person?.image; else noPersonImage" 
+          [src]="person.image" 
+          [alt]="person.name" 
+          class="profile-image"
+        />
+        <p>{{person.name}}</p>
+        <ng-template #noPersonImage>
+          <div class="placeholder">No Image</div>
+        </ng-template>
+    
+        <img 
+          *ngIf="person?.spouse?.image" 
+          [src]="person.spouse.image" 
+          [alt]="person.spouse.name" 
+          class="spouse-image"
+        />
+        <p>{{person?.spouse?.name}}</p>
+      </div>
+    
+      <!-- Right Side: Details -->
+      <div class="profile-details">
+        <h1>{{ person?.name }}</h1>
+        <h3 *ngIf="person?.spouse?.name">Spouse: {{ person.spouse.name }}</h3>
+        <p>{{ person?.bio }}</p>
+        <p *ngIf="person?.opinion">Opinion: {{ person?.opinion}} </p>
+      </div>
+    </div>
+  </div>
+  
